@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212;
+}
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.nav-menu li {
+    margin: 0.5rem;
+}
+.nav-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.nav-menu a:hover, .nav-menu a.active {
+    background-color: #3700B3;
+}
+section {
+    background-color: #1e1e1e;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+section:hover {
+    transform: translateY(-5px);
+}
+h1 {
+    color: #BB86FC;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.color-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.color-menu li {
+    margin: 0 1rem;
+}
+.color-menu a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.color-menu a:hover {
+    background-color: #3700B3;
+}
+h2 {
+    color: #BB86FC;
+    border-bottom: 2px solid #BB86FC;
+    padding-bottom: 10px;
+}
+
+.color-block {
+    width: 100px;
+    height: 100px; 
+    background-color: #f0f0f0; 
+    margin: 0 auto; 
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-block:hover {
+    transform: scale(1.1);
+}
+#rgb-block { background-color: rgb(255, 0, 0); }
+#cmyk-block { background-color: cyan; }
+#hsv-block { background-color: hsl(120, 100%, 50%); }
+.color-slider {
+    width: 100%;
+    margin: 10px 0;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.color-slider:hover {
+    opacity: 1;
+}
+.color-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #BB86FC;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.color-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #BB86FC;
+    cursor: pointer;
+    border-radius: 50%;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}

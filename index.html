@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welkom op Mijn Website</title>
+    <link rel="stylesheet" type="text/css" href="static/CSS/styles.css">
+    <!-- Maakt de icon van de wesite een leuke gif -->
+    <link rel="icon" type="image/x-icon" href="https://media.tenor.com/wgPQwH5HDMcAAAAj/cat-peek.gif">
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Dit is het navigatie menu van mijn website -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="./pages/aboutme.html">Over Mij</a></li>
+                <li><a href="./pages/binarysys.html">Binair Systeem</a></li>
+                <li><a href="./pages/kleurmodellen.html">Kleurmodellen</a></li>
+                <li><a href="./pages/bitmap.html">Bitmapfactor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welkom op mijn persoonlijke website</h1>
+        
+        <section id="intro">
+            <p>Hallo en welkom! Deze website is een verzameling van mijn interesses en projecten. Voel je vrij om rond te kijken en meer te leren over mij en de dingen waar ik geintereseert over was/ben.</p>
+        </section>
+
+        <section id="featured-content">
+            <h2>Uitgelichte dingen</h2>
+            <div class="content-grid">
+                <div class="content-item">
+                    <h3>Over mij</h3>
+                    <p>Leer meer over mij!</p>
+                    <a href="./pages/aboutme.html" class="btn">Leer Meer</a>
+                </div>
+                <div class="content-item">
+                    <h3>Binair Systeem</h3>
+                    <p>01101000 01101111 01101001</p>
+                    <a href="./pages/binarysys.html" class="btn">Ga</a>
+                </div>
+                <div class="content-item">
+                    <h3>Kleurmodellen</h3>
+                    <p><span style="color:#FF0000">K</span><span style="color:#FFBF00">l</span><span style="color:#80FF00">e</span><span style="color:#00FF40">u</span><span style="color:#00FFFF">r</span><span style="color:#0040FF">e</span><span style="color:#7F00FF">n</span><span style="color:#FF00BF">!</span></p>
+                    <a href="./pages/kleurmodellen.html" class="btn"><span style="color:#F50A0A">w</span><span style="color:#C6F50A">o</span><span style="color:#0AF568">a</span><span style="color:#0A68F5">h</span><span style="color:#C60AF5">!</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="fun-interaction">
+            <h2>Gewoon voor de lol</h2>
+            <p>Voor een secret, please bevestig dat je geen bot bent</p>
+            <div id="captcha-container" style="width: 250px; margin: 20px auto; background-color: #f9f9f9; border: 1px solid #d3d3d3; border-radius: 3px; padding: 8px;">
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 24px; height: 24px; border: 2px solid #c1c1c1; border-radius: 2px; margin-right: 8px; cursor: pointer;" onclick="handleCaptchaClick(event)">
+                        <div id="checkmark" style="display: none; color: #009688; font-size: 16px; text-align: center; line-height: 24px;">✓</div>
+                    </div>
+                    <label style="font-family: Arial, sans-serif; font-size: 13px; color: #000000; cursor: pointer;" onclick="handleCaptchaClick(event)">
+                        I'm not a robot
+                    </label>
+                    <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="reCAPTCHA" style="width: 24px; height: 24px; margin-left: 10px;">
+                    <div style="display: flex; justify-content: right; margin-left: 2em;">
+                        <small style="color: #555; font-size: 8px;">reCAPTCHA<br>Privacy - Terms</small>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function handleCaptchaClick(event) {
+                    event.preventDefault();
+                    document.getElementById('checkmark').style.display = 'block';
+                        window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1', '_blank');
+                        toonInhoud();
+                    }
+
+            </script>
+            <div id="verborgen-inhoud" style="display: none;">
+                <p> Get trolled :3</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>+2 punten</p>
+    </footer>
+
+    <script>
+        function toonInhoud() {
+            document.getElementById("verborgen-inhoud").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="nl">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kleurmodellen</title>
+        <link rel="stylesheet" href="../static/CSS/kleurmodellen.css">
+        <link rel="icon" type="image/x-icon" href="https://media.tenor.com/wgPQwH5HDMcAAAAj/cat-peek.gif">
+    </head>
+    
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./aboutme.html">Over Mij</a></li>
+                <li><a href="./binarysys.html">Binair Systeem</a></li>
+                <li><a href="./kleurmodellen.html" class="active">Kleurmodellen</a></li>
+                <li><a href="./bitmap.html">Bitmapfactor</a></li>
+            </ul>
+        </nav>
+        <body>
+            <header>
+            <h1> Kleurmodellen </h1>
+            <ul class="color-menu">
+            <li><a href="#rgb">RGB</a></li>
+                <li><a href="#cmyk">CMYK</a></li>
+                <li><a href="#hsb">HSB</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <section id="intro">
+                <h2>Introductie tot Kleurmodellen</h2>
+                <p>Kleurmodellen zijn verschillende soorten manieren om kleuren op beeld, papier of grafische computer programma's.</p>
+                <ul class="color-menu">
+                    <li><a href="kleurmodelleninfo.html">Hier kun je meer informatie lezen over kleurmodellen!</a></li>
+            </section>
+
+            <section id="rgb">
+                <h2>RGB (Rood, Groen, Blauw)</h2>
+                <p>Het RGB-kleurmodel wordt gebruikt op computerschermen en televisies.</p>
+                <p> Probeer er mee te spelen! <br> De eerste slider verandert de rode kleur, de tweede de groene en de laatste de blauwe!</p>
+                <div class="color-block" id="rgb-block"></div>
+                <div style="display: flex; justify-content: space-between;">
+                <div style="text-align:left;"><a> 0 </a></div> <div style="text-align:right;"><a> 255 </a> </div></div>
+                <input type="range" min="0" max="255" value="255" class="color-slider" id="red-slider">
+                <input type="range" min="0" max="255" value="0" class="color-slider" id="green-slider">
+                <input type="range" min="0" max="255" value="0" class="color-slider" id="blue-slider">
+            </section>
+
+            <section id="cmyk">
+                <h2>CMYK (Cyaan, Magenta, Geel, Zwart)</h2>
+                <p>CMYK wordt meestal gebruikt als je iets uit wilt printen.</p>
+                <p>Probeer er mee te spelen! <br> De eerste slider verandert de kleur cyaan, de tweede magenta, de derde geel en de laatste zwart!</p>
+                <div class="color-block" id="cmyk-block"></div>
+                <div style="display: flex; justify-content: space-between;">
+                <div style="text-align:left;"><a> 0 </a></div> <div style="text-align:right;"><a> 100 </a> </div></div>
+                <input type="range" min="0" max="100" value="0" class="color-slider" id="cyan-slider">
+                <input type="range" min="0" max="100" value="0" class="color-slider" id="magenta-slider">
+                <input type="range" min="0" max="100" value="0" class="color-slider" id="yellow-slider">
+                <input type="range" min="0" max="100" value="0" class="color-slider" id="black-slider">
+            </section>
+
+            <section id="hsb">
+                <h2>HSB (Hue, Saturation, Brightness)</h2>
+                <p>HSB is een kleurmodel dat vaak wordt gebruikt in grafische software.</p>
+                <p>HSB staat voor hue, saturation, Brightness <br> De eerste slider verandert de hue, de tweede de saturation en de laatste de Brightness!</p>
+                <div class="color-block" id="hsv-block"></div>
+                <div style="display: flex; justify-content: space-between;">
+                <div style="text-align:left;"><a> 0 </a></div> <div style="text-align: centder;"><a>Hue</a></div><div style="text-align:right;"><a> 360 </a> </div></div>
+                <input type="range" min="0" max="360" value="120" class="color-slider" id="hue-slider">
+                <div style="display: flex; justify-content: space-between;">
+                <div style="text-align:left;"><a> 0 </a></div><div style="text-align: center;"><a>Saturation</a></div><div style="text-align:right;"><a> 100 </a> </div></div>
+                <input type="range" min="0" max="100" value="100" class="color-slider" id="saturation-slider">
+                <div style="display: flex; justify-content: space-between;">
+                <div style="text-align:left;"><a> 0 </a></div> <div style="text-align: center;"><a>Brightness</a></div> <div style="text-align:right;"><a> 100 </a> </div></div>
+                <input type="range" min="0" max="100" value="50" class="color-slider" id="value-slider">
+            </section>
+        </main>
+
+        <footer>
+            <p>+2 ( +3?? :3 ) punten</p>
+        </footer>
+
+        <!-- Dit stuk script neemt de waarde van de sliders en geeft het een nummer, daarna worden de nummers bewaard en word er uitgerekend welke kleur eruit komt met welke nummer code-->
+        <script>
+            const rgbBlock = document.getElementById('rgb-block');
+            const redSlider = document.getElementById('red-slider');
+            const greenSlider = document.getElementById('green-slider');
+            const blueSlider = document.getElementById('blue-slider');
+
+            function updateRGBColor() {
+                const r = redSlider.value;
+                const g = greenSlider.value;
+                const b = blueSlider.value;
+                rgbBlock.style.backgroundColor = `rgb(${r},${g},${b})`;
+            }
+
+            redSlider.addEventListener('input', updateRGBColor);
+            greenSlider.addEventListener('input', updateRGBColor);
+            blueSlider.addEventListener('input', updateRGBColor);
+
+            const cmykBlock = document.getElementById('cmyk-block');
+            const cyanSlider = document.getElementById('cyan-slider');
+            const magentaSlider = document.getElementById('magenta-slider');
+            const yellowSlider = document.getElementById('yellow-slider');
+            const blackSlider = document.getElementById('black-slider');
+
+            function updateCMYKColor() {
+                const c = cyanSlider.value / 100;
+                const m = magentaSlider.value / 100;
+                const y = yellowSlider.value / 100;
+                const k = blackSlider.value / 100;
+                
+                const r = Math.round(255 * (1 - c) * (1 - k));
+                const g = Math.round(255 * (1 - m) * (1 - k));
+                const b = Math.round(255 * (1 - y) * (1 - k));
+                
+                cmykBlock.style.backgroundColor = `rgb(${r},${g},${b})`;
+            }
+
+            cyanSlider.addEventListener('input', updateCMYKColor);
+            magentaSlider.addEventListener('input', updateCMYKColor);
+            yellowSlider.addEventListener('input', updateCMYKColor);
+            blackSlider.addEventListener('input', updateCMYKColor);
+
+            const hsvBlock = document.getElementById('hsv-block');
+            const hueSlider = document.getElementById('hue-slider');
+            const saturationSlider = document.getElementById('saturation-slider');
+            const valueSlider = document.getElementById('value-slider');
+
+            function updateHSVColor() {
+                const h = hueSlider.value;
+                const s = saturationSlider.value;
+                const v = valueSlider.value;
+                hsvBlock.style.backgroundColor = `hsl(${h},${s}%,${v}%)`;
+            }
+
+            hueSlider.addEventListener('input', updateHSVColor);
+            saturationSlider.addEventListener('input', updateHSVColor);
+            valueSlider.addEventListener('input', updateHSVColor);
+        </script>
+    </body>
+
+
+</html>
