@@ -117,7 +117,7 @@ footer {
     margin-top: auto;
 }
 
-/* Responsive design :) */
+/* Responsive design */
 @media (max-width: 768px) {
     .nav-menu {
         flex-direction: column;
