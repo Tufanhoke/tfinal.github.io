@@ -69,64 +69,7 @@
         <p>+2 ( +3?? :3 ) punten</p>
     </footer>
 
-    <!-- Dit stuk script neemt de waarde van de sliders en geeft het een nummer, daarna worden de nummers bewaard en word er uitgerekend welke kleur eruit komt met welke nummer code-->
-    <script>
-        const rgbBlock = document.getElementById('rgb-block');
-        const redSlider = document.getElementById('red-slider');
-        const greenSlider = document.getElementById('green-slider');
-        const blueSlider = document.getElementById('blue-slider');
-
-        function updateRGBColor() {
-            const r = redSlider.value;
-            const g = greenSlider.value;
-            const b = blueSlider.value;
-            rgbBlock.style.backgroundColor = `rgb(${r},${g},${b})`;
-        }
-
-        redSlider.addEventListener('input', updateRGBColor);
-        greenSlider.addEventListener('input', updateRGBColor);
-        blueSlider.addEventListener('input', updateRGBColor);
-
-        const cmykBlock = document.getElementById('cmyk-block');
-        const cyanSlider = document.getElementById('cyan-slider');
-        const magentaSlider = document.getElementById('magenta-slider');
-        const yellowSlider = document.getElementById('yellow-slider');
-        const blackSlider = document.getElementById('black-slider');
-
-        function updateCMYKColor() {
-            const c = cyanSlider.value / 100;
-            const m = magentaSlider.value / 100;
-            const y = yellowSlider.value / 100;
-            const k = blackSlider.value / 100;
-
-            const r = Math.round(255 * (1 - c) * (1 - k));
-            const g = Math.round(255 * (1 - m) * (1 - k));
-            const b = Math.round(255 * (1 - y) * (1 - k));
-
-            cmykBlock.style.backgroundColor = `rgb(${r},${g},${b})`;
-        }
-
-        cyanSlider.addEventListener('input', updateCMYKColor);
-        magentaSlider.addEventListener('input', updateCMYKColor);
-        yellowSlider.addEventListener('input', updateCMYKColor);
-        blackSlider.addEventListener('input', updateCMYKColor);
-
-        const hsvBlock = document.getElementById('hsv-block');
-        const hueSlider = document.getElementById('hue-slider');
-        const saturationSlider = document.getElementById('saturation-slider');
-        const valueSlider = document.getElementById('value-slider');
-
-        function updateHSVColor() {
-            const h = hueSlider.value;
-            const s = saturationSlider.value;
-            const v = valueSlider.value;
-            hsvBlock.style.backgroundColor = `hsl(${h},${s}%,${v}%)`;
-        }
-
-        hueSlider.addEventListener('input', updateHSVColor);
-        saturationSlider.addEventListener('input', updateHSVColor);
-        valueSlider.addEventListener('input', updateHSVColor);
-    </script>
+  
 </body>
 
 
