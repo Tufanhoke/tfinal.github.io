@@ -1,64 +1,96 @@
-body {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+
+section {
+    background-color: #1e1e1e;
+    margin: 20px 0;
     padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+}
+section:hover {
+    transform: translateY(-5px);
 }
 h1 {
+    color: #BB86FC;
+    font-size: 2.5rem;
     text-align: center;
-    color: #4CAF50;
+    margin-bottom: 1rem;
 }
-.nav-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+
+h2{
+    font-size: 2em
+}
+
+p{
+    color: #ffffff
+}
+.color-menu {
+    list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
-.nav-menu li {
-    margin: 0.5rem;
+.color-menu li {
+    margin: 0 1rem;
 }
-.nav-menu a {
+.color-menu a {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
-    display: block;
+    transition: background-color 0.3s;
 }
-.nav-menu a:hover, .nav-menu a.active {
+.color-menu a:hover {
     background-color: #3700B3;
 }
-.game-container {
-    background-color: #2a2a2a;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
+
+.color-block {
+    width: 100px;
+    height: 100px; 
+    background-color: #f0f0f0; 
+    margin: 0 auto; 
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
 }
-.achievement, .badge, .level-indicator, .reward {
-    background-color: #333;
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 10px;
-    text-align: center;
+
+.color-block:hover {
+    transform: scale(1.1);
 }
-.progress-bar {
-    background-color: #444;
-    border-radius: 5px;
-    height: 20px;
-    margin-top: 10px;
+#rgb-block { background-color: rgb(255, 0, 0); }
+#cmyk-block { background-color: cyan; }
+#hsv-block { background-color: hsl(120, 100%, 50%); }
+.color-slider {
+    width: 100%;
+    margin: 10px 0;
+    background: #333;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
 }
-.progress {
-    background-color: #4CAF50;
-    height: 100%;
-    border-radius: 5px;
+.color-slider:hover {
+    opacity: 1;
 }
+.color-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #BB86FC;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.color-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #BB86FC;
+    cursor: pointer;
+    border-radius: 50%;
+}
+

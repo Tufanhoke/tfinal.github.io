@@ -12,27 +12,6 @@ body {
     flex-direction: column;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    height: 100%;
-    width: 100%;
-}
-
-.background-image {
-    background-image: url('your-image-url.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    position: fixed; /* Fixed position to cover entire screen */
-    z-index: -1; /* Behind other content */
-}
-
 header {
     background-color: #1F1F1F;
     padding: 1rem 0;

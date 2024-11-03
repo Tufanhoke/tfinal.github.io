@@ -1,5 +1,7 @@
+/* Font die ik gebruik */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Alle regels waar de body style zich aan moet houden */ 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #121212;
@@ -10,12 +12,14 @@ body {
     flex-direction: column;
 }
 
+/* Alle regels waar de header style zich aan moet houden */
 header {
     background-color: #1F1F1F;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Alle regels waar de navigation menu zich aan moet houden */
 .nav-menu {
     list-style-type: none;
     padding: 0;
@@ -25,10 +29,12 @@ header {
     flex-wrap: wrap;
 }
 
+/* Specifieke margin aan navigation menu "li" tag */
 .nav-menu li {
     margin: 0.5rem;
 }
 
+/* Legt de regels van nav-menu "a" element uit */
 .nav-menu a {
     color: #e0e0e0;
     text-decoration: none;
@@ -39,10 +45,12 @@ header {
     display: block;
 }
 
+/* Achtergrond kleur als je over iets heen hovert of als het een active tage heeft */
 .nav-menu a:hover, .nav-menu a.active {
     background-color: #3700B3;
 }
 
+/* Legt de regels van het "main" element uit */
 main {
     max-width: 1000px;
     width: 90%;
@@ -51,6 +59,7 @@ main {
     flex: 1;
 }
 
+/* Legt uit hoe de h1, h2, h3 en p tags eruit moeten zien */
 h1, h2, h3, p {
     text-align: center;
     color: #BB86FC;
@@ -58,10 +67,12 @@ h1, h2, h3, p {
     font-size: 1.1em;
 }
 
+/* Verantert de margin onderaan een section met 3rem */
 section {
     margin-bottom: 3rem;
 }
 
+/* Legt de regels van content-grid element uit */
 .content-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -69,6 +80,7 @@ section {
     margin-top: 2rem;
 }
 
+/* Legt de regels van content-item element uit */
 .content-item {
     background-color: #1F1F1F;
     border-radius: 100px;
@@ -77,6 +89,7 @@ section {
     text-align: center;
 }
 
+/* Legt de regels van btn element uit */
 .btn {
     display: inline-block;
     background-color: #3700B3;
@@ -86,12 +99,12 @@ section {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
-
+/* Als je over een button hovert dan word de background color deze kleur */
 .btn:hover {
     background-color: #6200EE;
 }
 
-
+/* Legt regels van footer element uit */
 footer {
     background-color: #34495e;
     color: white;
@@ -101,7 +114,7 @@ footer {
     margin-top: auto;
 }
 
-/* responsive design */
+/* Responsive design */
 @media (max-width: 768px) {
     .nav-menu {
         flex-direction: column;
