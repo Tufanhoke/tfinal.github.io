@@ -1,36 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: 'Montserrat', Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #121212;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
     color: #e0e0e0;
+    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body, html {
-    height: 100%;
-    width: 100%;
-}
-
-.background-image {
-    background-image: url('your-image-url.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
-    position: fixed; /* Fixed position to cover entire screen */
-    z-index: -1; /* Behind other content */
 }
 
 header {
@@ -76,12 +53,9 @@ main {
 
 h1, h2, h3, p {
     text-align: center;
-}
-
-h1 {
     color: #BB86FC;
-    margin-bottom: 2rem;
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 section {
@@ -108,7 +82,7 @@ section {
     background-color: #3700B3;
     color: #ffffff;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 30px;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
@@ -117,17 +91,6 @@ section {
     background-color: #6200EE;
 }
 
-#captcha-container {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-#verborgen-inhoud {
-    background-color: #1F1F1F;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 2rem;
-}
 
 footer {
     background-color: #34495e;
