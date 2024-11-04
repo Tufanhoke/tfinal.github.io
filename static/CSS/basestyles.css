@@ -59,18 +59,35 @@ main {
     flex: 1;
 }
 
-/* Legt uit hoe de h1, h2, h3 en p tags eruit moeten zien */
-h1, h2, h3, p {
-    text-align: center;
+/* Legt uit hoe de h1 tag eruit moeten zien */
+h1 {
     color: #BB86FC;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Legt uit hoe de h2 tag eruit moeten zien */
+h2 {
+    color: #BB86FC;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/*Legt uit hoe je p tag eruit moet zien */
+p {
+    text-align: center;
+    color: #ffffff;
     margin-bottom: 10px;
     font-size: 1.1em;
 }
 
-/* Verantert de margin onderaan een section met 3rem */
+/* Verantert de margin onderaan een section met 3em */
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 3em;
 }
+
 
 /* Legt de regels van content-grid element uit */
 .content-grid {
